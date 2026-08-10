@@ -758,13 +758,16 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 /* Ritmo vertical automático: un solo valor de espaciado entre elementos,
    en vez de márgenes sueltos en cada párrafo. Sube el nivel para bloques grandes. */
 .case-accordion-panel > * + * { margin-top: 20px; }
-.case-accordion-panel > .key-insight,
-.case-accordion-panel > .two-col-block,
-.case-accordion-panel > .grid,
-.case-accordion-panel > figure,
-.case-accordion-panel > ol,
-.case-accordion-panel > ul,
-.case-accordion-panel > h4 { margin-top: var(--space-stack-lg); }
+.case-accordion-panel > * + .key-insight,
+.case-accordion-panel > * + .two-col-block,
+.case-accordion-panel > * + .grid,
+.case-accordion-panel > * + figure,
+.case-accordion-panel > * + ol,
+.case-accordion-panel > * + ul,
+.case-accordion-panel > * + h4 { margin-top: var(--space-stack-lg); }
+
+/* Excepción puntual: este key-insight funciona como declaración corta, no como cita — se mantiene en bold */
+.key-insight.key-insight--bold { font-weight: 700; }
 
 .case-mobile-toc {
   position: sticky;
@@ -830,11 +833,23 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 figure.media-block { margin: 0; }
 figure.media-block img { border-radius: var(--radius-input); border: 1px solid var(--border); width: 100%; }
 
-/* Imagen de portada: proporción fija, recorte centrado automático en cualquier tamaño, sin borde */
-.media-cover {
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  object-position: center;
+/* Imagen de portada del case study: se muestra completa, sin recortar ni forzar proporción,
+   dentro de una tarjeta con su propio padding (funciona con cualquier imagen, cuadrada o panorámica). */
+.case-hero__media {
+  margin: 0;
+  background: var(--surface-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-input);
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.case-hero__media img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: calc(var(--radius-input) - 6px);
   border: none;
 }
 figure.media-block figcaption {
@@ -844,6 +859,10 @@ figure.media-block figcaption {
   display: flex;
   align-items: flex-start;
   gap: 8px;
+}
+
+@media (min-width: 768px) {
+  .sitemap-figure { padding-top: var(--space-stack-md); }
 }
 
 /* ---------- 17b. CASE STUDY LAYOUT ---------- */
