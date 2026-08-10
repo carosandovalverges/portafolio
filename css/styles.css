@@ -171,6 +171,17 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 @media (min-width: 768px) { .text-body-lg { font-size: 20px; line-height: 32px; } }
 
 .text-body-md { font-size: 16px; line-height: 24px; }
+.text-body-sm { font-size: 14px; line-height: 20px; }
+
+/* Resaltado tipo marcador (destacar frases dentro de un título/párrafo) */
+.hl {
+  background: var(--accent);
+  color: var(--primary);
+  padding: 0 6px;
+  border-radius: 6px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
 
 .text-label-md {
   font-size: 14px;
@@ -687,13 +698,38 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   background: var(--surface-container-high);
   border: 1px solid var(--border);
   border-radius: var(--radius-input);
-  padding: var(--space-stack-sm);
+  padding: var(--space-stack-md);
   display: flex;
   flex-direction: column;
-  gap: var(--space-stack-sm);
+  gap: var(--space-stack-md);
 }
 @media (min-width: 768px) {
   .case-sidebar { position: sticky; top: 120px; }
+}
+
+.sidebar-field { display: flex; flex-direction: column; gap: 8px; }
+.sidebar-field + .sidebar-field { padding-top: var(--space-stack-md); border-top: 1px solid var(--border); }
+
+.sidebar-nav { padding-top: var(--space-stack-md); border-top: 1px solid var(--border); display: flex; flex-direction: column; }
+
+/* Etiqueta uppercase con marcador decorativo (usada en sidebars, encabezados de listas, etc.) */
+.label-caps {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--outline);
+}
+.label-caps::before {
+  content: '';
+  width: 12px;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--accent);
+  flex-shrink: 0;
 }
 
 .case-toc-link {
