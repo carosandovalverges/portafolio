@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV — Carola Sandoval, UX Designer</title>
+<meta name="description" content="Experiencia profesional, formación y stack de Carola Sandoval, UX/Product Designer.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Saltar al contenido</a>
+
+<nav class="navbar" id="mainNav">
+  <a class="navbar__logo" href="index.html">Carola Sandoval</a>
+  <div class="navbar__links">
+    <a class="navbar__link" href="index.html">Home</a>
+    <a class="navbar__link" href="about.html">Sobre mí</a>
+    <a class="navbar__link is-active" href="cv.html">CV</a>
+    <a class="btn btn-accent md:flex hidden" href="index.html#contacto">Hablemos</a>
+  </div>
+  <button class="navbar__menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileDrawer" aria-label="Abrir menú">
+    <span class="material-symbols-outlined">menu</span>
+  </button>
+</nav>
+
+<div class="navbar__drawer" id="mobileDrawer">
+  <a class="navbar__link" href="index.html">Home</a>
+  <a class="navbar__link" href="about.html">Sobre mí</a>
+  <a class="navbar__link is-active" href="cv.html">CV</a>
+  <a class="btn btn-accent" href="index.html#contacto">Hablemos</a>
+</div>
+
+<main id="main">
+  <!-- Hero -->
+  <section class="container section--sm">
+    <span class="text-eyebrow" style="display:block; margin-bottom:16px;">Experiencia</span>
+    <h1 class="text-display-xl measure" style="margin-bottom:24px;">Evolución constante desde el diseño visual hacia la estrategia de producto.</h1>
+    <a class="btn btn-accent" href="assets/cv/carola-sandoval-cv.pdf" download>
+      Descargar CV
+      <span class="material-symbols-outlined" style="font-size:18px;">download</span>
+    </a>
+  </section>
+
+  <!-- Experiencia -->
+  <section class="container section--sm border-top">
+    <div class="grid" style="grid-template-columns:1fr; gap: var(--space-stack-lg);">
+      <h2 class="text-headline-md">Experiencia Profesional</h2>
+      <div class="timeline">
+        <div class="timeline__item" style="position:relative;">
+          <div class="timeline__dot"></div>
+          <div class="timeline__header">
+            <h3 class="text-headline-sm">UX Leader</h3>
+            <span class="text-label-md text-muted">2021 — Presente</span>
+          </div>
+          <h4 class="text-body-lg text-muted" style="margin-bottom:8px; font-weight:600;">Engineer Touch Ltda</h4>
+          <p class="text-body-md text-muted measure">Liderazgo de equipos de diseño, definición de estrategias de UX/UI para productos B2B complejos. Implementación de sistemas de diseño escalables y mejora en procesos de investigación con usuarios, logrando reducir el time-to-market en un 30%.</p>
+        </div>
+        <div class="timeline__item" style="position:relative;">
+          <div class="timeline__dot"></div>
+          <div class="timeline__header">
+            <h3 class="text-headline-sm">Art Director</h3>
+            <span class="text-label-md text-muted">2018 — 2021</span>
+          </div>
+          <h4 class="text-body-lg text-muted" style="margin-bottom:8px; font-weight:600;">Engineer Touch Ltda</h4>
+          <p class="text-body-md text-muted measure">Dirección de arte para campañas digitales e identidad visual corporativa. Supervisión de calidad visual en entregables web y marketing, elevando el estándar visual de la compañía y consolidando la marca en el sector tecnológico.</p>
+        </div>
+        <div class="timeline__item" style="position:relative;">
+          <div class="timeline__dot"></div>
+          <div class="timeline__header">
+            <h3 class="text-headline-sm">Graphic Designer</h3>
+            <span class="text-label-md text-muted">2015 — 2018</span>
+          </div>
+          <h4 class="text-body-lg text-muted" style="margin-bottom:8px; font-weight:600;">Engineer Touch Ltda</h4>
+          <p class="text-body-md text-muted measure">Diseño de interfaces web iniciales, material corporativo y activos digitales para redes sociales. Colaboración estrecha con equipos de desarrollo para la maquetación front-end básica.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Educación y Stack -->
+  <section class="container section--sm border-top" style="background:var(--surface-elevated);">
+    <div class="grid grid-2">
+      <div class="flex flex-col gap-lg">
+        <h2 class="text-headline-md">Educación</h2>
+        <div class="grid grid-2">
+          <div class="card" style="border-radius: var(--radius-input);">
+            <span class="text-label-sm text-muted" style="display:block; margin-bottom:8px;">2022</span>
+            <h3 class="text-headline-sm" style="margin-bottom:4px;">Diplomado UX</h3>
+            <p class="text-body-md text-muted">Pontificia Universidad Católica</p>
+          </div>
+          <div class="card" style="border-radius: var(--radius-input);">
+            <span class="text-label-sm text-muted" style="display:block; margin-bottom:8px;">2020</span>
+            <h3 class="text-headline-sm" style="margin-bottom:4px;">Diplomado UI</h3>
+            <p class="text-body-md text-muted">Universidad de Chile</p>
+          </div>
+          <div class="card" style="border-radius: var(--radius-input);">
+            <span class="text-label-sm text-muted" style="display:block; margin-bottom:8px;">2010 – 2015</span>
+            <h3 class="text-headline-sm" style="margin-bottom:4px;">Diseño Gráfico</h3>
+            <p class="text-body-md text-muted">Instituto Profesional Duoc UC</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col gap-lg">
+        <h2 class="text-headline-md">Stack &amp; Skills</h2>
+        <div class="flex flex-col gap-md">
+          <div>
+            <h4 class="text-label-md" style="text-transform:uppercase; color:var(--outline); margin-bottom:12px;">Diseño</h4>
+            <div class="flex flex-wrap gap-xs">
+              <span class="chip chip--ghost">Figma</span>
+              <span class="chip chip--ghost">Design Systems</span>
+              <span class="chip chip--ghost">Prototyping</span>
+              <span class="chip chip--ghost">Adobe CC</span>
+            </div>
+          </div>
+          <div>
+            <h4 class="text-label-md" style="text-transform:uppercase; color:var(--outline); margin-bottom:12px;">Web</h4>
+            <div class="flex flex-wrap gap-xs">
+              <span class="chip chip--ghost">HTML/CSS</span>
+              <span class="chip chip--ghost">CSS puro</span>
+              <span class="chip chip--ghost">Webflow</span>
+            </div>
+          </div>
+          <div>
+            <h4 class="text-label-md" style="text-transform:uppercase; color:var(--outline); margin-bottom:12px;">Analytics &amp; AI</h4>
+            <div class="flex flex-wrap gap-xs">
+              <span class="chip chip--ghost">Hotjar</span>
+              <span class="chip chip--ghost">Google Analytics</span>
+              <span class="chip chip--ghost">Midjourney</span>
+              <span class="chip chip--ghost">ChatGPT</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="flex flex-col gap-xs">
+    <a class="footer__brand" href="index.html">Carola Sandoval</a>
+    <p class="text-body-md text-on-primary-muted">© <span id="year"></span> Carola Sandoval. Hagamos algo que tenga sentido.</p>
+  </div>
+  <div class="footer__links footer__links--row">
+    <a href="#">LinkedIn</a>
+    <a href="#">Dribbble</a>
+    <a href="mailto:carola.sandoval@hotmail.com">Email</a>
+  </div>
+</footer>
+
+<div class="fab-group">
+  <a class="fab fab--accent" href="mailto:carola.sandoval@hotmail.com" aria-label="Enviar email a Carola Sandoval" title="Contactar">
+    <span class="material-symbols-outlined">mail</span>
+  </a>
+  <button class="fab fab--ghost" id="scrollTopBtn" aria-label="Volver arriba">
+    <span class="material-symbols-outlined">arrow_upward</span>
+  </button>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carola Sandoval — UX &amp; Digital Product Designer</title>
+<meta name="description" content="Portafolio de Carola Sandoval, Senior UX/Product Designer especializada en UX Strategy, Design Systems y diseño asistido por IA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Saltar al contenido</a>
+
+<nav class="navbar" id="mainNav">
+  <a class="navbar__logo" href="index.html">Carola Sandoval</a>
+  <div class="navbar__links">
+    <a class="navbar__link is-active" href="index.html">Home</a>
+    <a class="navbar__link" href="about.html">Sobre mí</a>
+    <a class="navbar__link" href="cv.html">CV</a>
+    <a class="btn btn-accent md:flex hidden" href="index.html#contacto">Hablemos</a>
+  </div>
+  <button class="navbar__menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileDrawer" aria-label="Abrir menú">
+    <span class="material-symbols-outlined">menu</span>
+  </button>
+</nav>
+
+<div class="navbar__drawer" id="mobileDrawer">
+  <a class="navbar__link is-active" href="index.html">Home</a>
+  <a class="navbar__link" href="about.html">Sobre mí</a>
+  <a class="navbar__link" href="cv.html">CV</a>
+  <a class="btn btn-accent" href="index.html#contacto">Hablemos</a>
+</div>
+
+<main id="main">
+  <!-- Hero -->
+  <section class="container hero">
+    <div class="hero__content">
+      <span class="text-eyebrow">UX / Product Design</span>
+      <h1 class="text-display-xl">Diseño centrado en el usuario, impulsado por AI.</h1>
+      <p class="text-body-lg text-muted measure">
+        Hola, soy Carola. Transformo problemas complejos en experiencias digitales elegantes y escalables. Especializada en UX Strategy, Design Systems y la integración de IA en el proceso de diseño para equipos de alto rendimiento.
+      </p>
+      <div class="flex flex-wrap gap-xs" style="margin-top: 16px;">
+        <span class="chip">UX/UI Design</span>
+        <span class="chip">Design Systems</span>
+        <span class="chip">UX Strategy</span>
+        <span class="chip chip--accent">AI-Assisted Design</span>
+        <span class="chip">Prototyping</span>
+        <span class="chip">User Research</span>
+        <span class="chip">Agile</span>
+        <span class="chip">Figma Expert</span>
+      </div>
+    </div>
+    <div class="hero__visual">
+      <div class="hero__portrait">
+        <img src="img/carola-profile.jpg" alt="Retrato de Carola Sandoval" class="grayscale-hover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+        <div class="hero__portrait-placeholder" style="display:none;">Fotografía / imagen personal</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proyectos destacados -->
+  <section class="container section bg-surface" id="proyectos">
+    <div class="flex flex-col md:flex-row justify-between items-end gap-sm" style="margin-bottom: var(--space-stack-lg);">
+      <h2 class="text-headline-lg">Proyectos Destacados</h2>
+      <div class="filters" id="projectFilters">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="product">Product Design</button>
+        <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
+        <button class="filter-btn" data-filter="fintech">Fintech</button>
+      </div>
+    </div>
+
+    <div class="flex flex-col gap-lg" id="projectsGrid">
+      <!-- Project 1 -->
+      <article class="project-card product">
+        <div class="project-card__media" style="background-image:url('img/rgr-cover.jpg')"></div>
+        <div class="project-card__body">
+          <span class="text-label-sm text-muted" style="margin-bottom:8px;">Product Design / 2023</span>
+          <h3 class="text-headline-md" style="margin-bottom:16px;">RGR — Plataforma Global</h3>
+          <p class="text-body-md text-muted" style="margin-bottom:24px;">Rediseño integral de la plataforma de gestión interna, mejorando la eficiencia operativa en un 40% a través de un nuevo Design System escalable.</p>
+          <a class="link-arrow" href="case-study.html">
+            Ver Caso de Estudio
+            <span class="material-symbols-outlined icon">arrow_forward</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="project-card project-card--reverse ecommerce">
+        <div class="project-card__media" style="background-image:url('img/princess-cover.jpg')"></div>
+        <div class="project-card__body">
+          <span class="text-label-sm text-muted" style="margin-bottom:8px;">E-commerce / 2022</span>
+          <h3 class="text-headline-md" style="margin-bottom:16px;">Princess Cruises</h3>
+          <p class="text-body-md text-muted" style="margin-bottom:24px;">Optimización del funnel de reservas online, incrementando la tasa de conversión y simplificando la selección de paquetes vacacionales complejos.</p>
+          <a class="link-arrow" href="#">
+            Ver Caso de Estudio
+            <span class="material-symbols-outlined icon">arrow_forward</span>
+          </a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Cómo trabajo -->
+  <section class="container section">
+    <div class="measure" style="margin-inline:auto; text-align:center; margin-bottom: var(--space-stack-lg);">
+      <h2 class="text-headline-lg" style="margin-bottom:24px;">Cómo Trabajo</h2>
+      <p class="text-body-lg text-muted italic" style="text-align:left; border-left:4px solid var(--accent); padding-left:24px;">
+        "Adapto el proceso a las necesidades del negocio, pero nunca negocio la investigación inicial. El buen diseño es consecuencia de entender el problema real."
+      </p>
+    </div>
+    <div class="grid grid-5">
+      <div class="step-card">
+        <div class="step-number">1</div>
+        <h4 class="text-headline-sm">Entender</h4>
+        <p class="text-body-md text-muted">Research cualitativo y cuantitativo. Entrevistas y análisis de datos para definir el problema.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-number">2</div>
+        <h4 class="text-headline-sm">Estructurar</h4>
+        <p class="text-body-md text-muted">Arquitectura de información, flujos de usuario y wireframes de baja fidelidad.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-number">3</div>
+        <h4 class="text-headline-sm">Diseñar</h4>
+        <p class="text-body-md text-muted">UI Design, prototipado de alta fidelidad y definición de Design Systems.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-number">4</div>
+        <h4 class="text-headline-sm">Validar</h4>
+        <p class="text-body-md text-muted">Test de usabilidad con usuarios reales y QA visual con el equipo de desarrollo.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-number">5</div>
+        <h4 class="text-headline-sm">Iterar</h4>
+        <p class="text-body-md text-muted">Medir impacto post-lanzamiento y aplicar mejoras continuas basadas en analíticas.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Final -->
+  <section class="cta-final">
+    <div class="cta-final__inner">
+      <h2 class="text-display-xl text-on-primary">¿Hablamos de producto?</h2>
+      <p class="text-body-lg text-on-primary-muted">
+        Siempre estoy abierta a discutir nuevos proyectos, colaboraciones o simplemente charlar sobre el futuro del diseño de interfaces.
+      </p>
+      <a class="btn btn-accent btn-lg" href="mailto:carola.sandoval@hotmail.com">Contactar</a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="flex flex-col gap-xs">
+    <a class="footer__brand" href="index.html">Carola Sandoval</a>
+    <p class="text-body-md text-on-primary-muted">© <span id="year"></span> Carola Sandoval. Hagamos algo que tenga sentido.</p>
+  </div>
+  <div class="footer__links footer__links--row">
+    <a href="#">LinkedIn</a>
+    <a href="#">Dribbble</a>
+    <a href="mailto:carola.sandoval@hotmail.com">Email</a>
+  </div>
+</footer>
+
+<div class="fab-group">
+  <a class="fab fab--accent" href="mailto:carola.sandoval@hotmail.com" aria-label="Enviar email a Carola Sandoval" title="Contactar">
+    <span class="material-symbols-outlined">mail</span>
+  </a>
+  <button class="fab fab--ghost" id="scrollTopBtn" aria-label="Volver arriba">
+    <span class="material-symbols-outlined">arrow_upward</span>
+  </button>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

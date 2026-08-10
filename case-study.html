@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RGR Case Study — Carola Sandoval</title>
+<meta name="description" content="Case study UX: de una landing limitada a un sitio web escalable con catálogo para RGR, combinando arquitectura de información y Vibe Coding.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Saltar al contenido</a>
+
+<nav class="navbar" id="mainNav">
+  <a class="navbar__logo" href="index.html">Carola Sandoval</a>
+  <div class="navbar__links">
+    <a class="navbar__link" href="index.html">Home</a>
+    <a class="navbar__link" href="about.html">Sobre mí</a>
+    <a class="navbar__link" href="cv.html">CV</a>
+    <a class="btn btn-accent md:flex hidden" href="index.html#contacto">Hablemos</a>
+  </div>
+  <button class="navbar__menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileDrawer" aria-label="Abrir menú">
+    <span class="material-symbols-outlined">menu</span>
+  </button>
+</nav>
+
+<div class="navbar__drawer" id="mobileDrawer">
+  <a class="navbar__link" href="index.html">Home</a>
+  <a class="navbar__link" href="about.html">Sobre mí</a>
+  <a class="navbar__link" href="cv.html">CV</a>
+  <a class="btn btn-accent" href="index.html#contacto">Hablemos</a>
+</div>
+
+<main id="main">
+  <!-- Hero -->
+  <header class="container section--sm">
+    <p class="text-eyebrow" style="margin-bottom:24px;">Case Study · UX/UI · AI-Assisted Design</p>
+    <h1 class="text-display-xl" style="margin-bottom:16px;">RGR</h1>
+    <h2 class="text-headline-lg text-muted measure" style="font-weight:400;">De una landing limitada a un sitio web escalable con catálogo.</h2>
+  </header>
+
+  <!-- Índice mobile -->
+  <div class="container">
+    <div class="case-mobile-toc">
+      <button class="case-accordion-toggle" id="mobileTocToggle" aria-expanded="false" aria-controls="mobileTocPanel">
+        <span class="text-label-md">Explorar caso</span>
+        <span class="material-symbols-outlined chevron" id="mobileTocChevron">expand_more</span>
+      </button>
+      <div class="case-mobile-toc__panel" id="mobileTocPanel">
+        <a class="case-toc-link" href="#contexto">Contexto</a>
+        <a class="case-toc-link" href="#desafio">Desafío</a>
+        <a class="case-toc-link" href="#mi-rol">Mi Rol</a>
+        <a class="case-toc-link" href="#arquitectura">Arquitectura</a>
+        <a class="case-toc-link" href="#ai-accelerator">IA + Vibe Coding</a>
+        <a class="case-toc-link" href="#restricciones">Restricciones</a>
+        <a class="case-toc-link" href="#resultados">Resultados</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container section--sm">
+    <div class="case-layout">
+      <!-- Sidebar -->
+      <aside class="case-sidebar hidden md:flex">
+        <div>
+          <p class="text-label-sm text-muted" style="text-transform:uppercase; margin-bottom:4px;">Rol</p>
+          <p class="text-body-md" style="font-weight:600; color:var(--primary);">UX/UI + Arquitectura + AI-assisted prototyping</p>
+        </div>
+        <div>
+          <p class="text-label-sm text-muted" style="text-transform:uppercase; margin-bottom:4px;">Duración</p>
+          <p class="text-body-md" style="font-weight:600; color:var(--primary);">4 Meses</p>
+        </div>
+        <div>
+          <p class="text-label-sm text-muted" style="text-transform:uppercase; margin-bottom:4px;">Herramientas</p>
+          <div class="flex flex-wrap gap-xs" style="margin-top:8px;">
+            <span class="chip chip--ghost">Figma</span>
+            <span class="chip chip--ghost">Lovable</span>
+            <span class="chip chip--ghost">ChatGPT</span>
+          </div>
+        </div>
+        <nav class="flex flex-col" style="gap:0; margin-top:8px;">
+          <p class="text-label-sm text-muted" style="text-transform:uppercase; margin-bottom:8px;">Explorar caso</p>
+          <a class="case-toc-link" href="#contexto">01 Contexto</a>
+          <a class="case-toc-link" href="#desafio">02 Desafío</a>
+          <a class="case-toc-link" href="#mi-rol">03 Mi Rol</a>
+          <a class="case-toc-link" href="#arquitectura">04 Arquitectura</a>
+          <a class="case-toc-link" href="#ai-accelerator">05 IA + Vibe Coding</a>
+          <a class="case-toc-link" href="#restricciones">06 Restricciones</a>
+          <a class="case-toc-link" href="#resultados">07 Resultados</a>
+        </nav>
+      </aside>
+
+      <!-- Contenido -->
+      <div class="case-content">
+        <figure class="media-block">
+          <img src="img/rgr-cover.jpg" alt="Vista general del sitio RGR mostrando la interfaz del catálogo en desktop">
+        </figure>
+
+        <section class="case-section" id="contexto">
+          <button class="case-accordion-toggle" onclick="toggleAccordion(this)">
+            <h3 class="text-headline-sm">Contexto</h3>
+            <span class="material-symbols-outlined md:hidden chevron">expand_more</span>
+          </button>
+          <div class="case-accordion-panel is-open">
+            <p class="text-body-lg text-muted measure">
+              RGR necesitaba dejar atrás una landing limitada y evolucionar hacia un sitio web capaz de presentar un catálogo creciente, organizar mejor su oferta y acompañar el crecimiento del negocio.
+            </p>
+          </div>
+        </section>
+
+        <section class="case-section" id="desafio">
+          <button class="case-accordion-toggle" onclick="toggleAccordion(this)">
+            <h3 class="text-headline-sm">Desafío</h3>
+            <span class="material-symbols-outlined md:hidden chevron">expand_more</span>
+          </button>
+          <div class="case-accordion-panel is-open">
+            <p class="text-body-md text-muted measure" style="margin-bottom:24px;">
+              La landing existente comenzaba a quedar pequeña frente a la cantidad de productos e información que RGR necesitaba comunicar. La pregunta principal no era cuántas páginas agregar, sino: <strong>"¿Qué tipo de sitio necesitaba realmente el negocio?"</strong> La respuesta fue evolucionar hacia un sitio corporativo con catálogo, manteniendo el contacto comercial como conversión principal y evitando incorporar carrito y checkout innecesarios.
+            </p>
+            <div class="two-col-block">
+              <div class="constraint-card">
+                <div class="card-icon"><span class="material-symbols-outlined">folder_open</span></div>
+                <h4 class="text-label-md" style="color:var(--primary); margin-bottom:8px;">Fragmentación</h4>
+                <p class="text-body-md text-muted" style="font-size:14px;">Los documentos estaban dispersos en múltiples silos de información, dificultando la recuperación rápida y auditoría.</p>
+              </div>
+              <div class="constraint-card">
+                <div class="card-icon"><span class="material-symbols-outlined">hourglass_empty</span></div>
+                <h4 class="text-label-md" style="color:var(--primary); margin-bottom:8px;">Ineficiencia Temporal</h4>
+                <p class="text-body-md text-muted" style="font-size:14px;">El equipo invertía un promedio de 2.5 horas diarias únicamente en la búsqueda y clasificación manual de archivos.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="case-section" id="mi-rol">
+          <button class="case-accordion-toggle" onclick="toggleAccordion(this)">
+            <h3 class="text-headline-sm">Mi Rol</h3>
+            <span class="material-symbols-outlined md:hidden chevron">expand_more</span>
+          </button>
+          <div class="case-accordion-panel is-open">
+            <p class="text-body-md text-muted measure">
+              Arquitectura de información, UX/UI, organización del catálogo, navegación, jerarquía, responsive design, lineamientos gráficos digitales, prototipado asistido por IA y revisión de factibilidad. Actué como puente entre las necesidades del negocio (stakeholders de RGR) y las capacidades técnicas del equipo de desarrollo.
+            </p>
+            <p class="key-insight" style="font-size:16px; margin-top:16px;">
+              El branding fue desarrollado por un proveedor externo y aprobado por el cliente previamente. Mi responsabilidad consistió en trasladar esa identidad al entorno digital y definir sus lineamientos de aplicación web.
+            </p>
+          </div>
+        </section>
+
+        <section class="case-section" id="arquitectura">
+          <button class="case-accordion-toggle" onclick="toggleAccordion(this)">
+            <h3 class="text-headline-sm">Arquitectura &amp; Estructura</h3>
+            <span class="material-symbols-outlined md:hidden chevron">expand_more</span>
+          </button>
+          <div class="case-accordion-panel is-open">
+            <p class="key-insight" style="margin-bottom:24px;">El principal cambio no fue visual. Fue estructural.</p>
+            <p class="text-body-md text-muted measure" style="margin-bottom:24px;">
+              Descubrir RGR → Explorar catálogo → Profundizar en producto → Contactar.
+            </p>
+            <figure class="media-block" style="margin-bottom:24px;">
+              <img src="img/rgr-sitemap.jpg" alt="Sitemap del proyecto RGR mostrando la jerarquía de navegación">
+              <figcaption><span class="material-symbols-outlined" style="font-size:16px;">info</span> Sitemap inicial definiendo los niveles de acceso y taxonomía documental.</figcaption>
+            </figure>
+            <figure class="media-block">
+              <img src="img/rgr-wireframes.jpg" alt="Evolución de wireframes de baja fidelidad a layouts estructurales">
+              <figcaption><span class="material-symbols-outlined" style="font-size:16px;">info</span> Evolución de wireframes de baja fidelidad a layouts estructurales.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="case-section ai-block" id="ai-accelerator">
+          <button class="case-accordion-toggle" onclick="toggleAccordion(this)">
+            <div class="flex items-center gap-xs">
+              <span class="material-symbols-outlined text-tertiary" style="font-size:28px;">psychology</span>
+              <h3 class="text-headline-sm">IA como acelerador</h3>
+            </div>
+            <span class="material-symbols-outlined md:hidden chevron">expand_more</span>
+          </button>
+          <div class="case-accordion-panel is-open">
+            <p class="text-body-md text-muted measure" style="margin-bottom:16px;">
+              La integración de herramientas de IA generativa fue crucial para mantener la agilidad del proyecto dadas las limitaciones de tiempo. Utilizamos Lovable para acelerar la generación del prototipo navegable a partir de la arquitectura y directrices ya definidas.
+            </p>
+            <p class="key-insight" style="margin-bottom:24px;">La IA aceleró la producción. Las decisiones continuaron siendo de diseño.</p>
+            <div class="two-col-block">
+              <div>
+                <h4 class="text-label-md" style="text-transform:uppercase; margin-bottom:12px;">Resolvió</h4>
+                <ul class="flex flex-col gap-xs text-body-md text-muted">
+                  <li>✓ Generación inicial y componentes.</li>
+                  <li>✓ Rapidez de prototipado.</li>
+                  <li>✓ Interfaz navegable.</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="text-label-md" style="text-transform:uppercase; margin-bottom:12px;">Requería criterio UX</h4>
+                <ul class="flex flex-col gap-xs text-body-md text-muted">
+                  <li>✓ Arquitectura y prioridades.</li>
+                  <li>✓ Navegación, jerarquía y escalabilidad.</li>
+                  <li>✓ Modelo de catálogo y factibilidad.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="case-section" id="restricciones">
+          <button class="case-accordion-toggle" onclick="toggleAccordion(this)">
+            <h3 class="text-headline-sm">Diseñar en condiciones reales</h3>
+            <span class="material-symbols-outlined md:hidden chevron">expand_more</span>
+          </button>
+          <div class="case-accordion-panel is-open">
+            <div class="grid grid-3" style="margin-bottom:24px;">
+              <div class="constraint-card">
+                <h4 class="text-label-md" style="color:var(--primary); margin-bottom:8px;">Tiempo</h4>
+                <p class="text-body-md text-muted" style="font-size:14px;">Plazo reducido para pasar de landing a sitio con catálogo.</p>
+              </div>
+              <div class="constraint-card">
+                <h4 class="text-label-md" style="color:var(--primary); margin-bottom:8px;">Marca</h4>
+                <p class="text-body-md text-muted" style="font-size:14px;">Branding desarrollado por un tercero y previamente aprobado.</p>
+              </div>
+              <div class="constraint-card">
+                <h4 class="text-label-md" style="color:var(--primary); margin-bottom:8px;">Tecnología</h4>
+                <p class="text-body-md text-muted" style="font-size:14px;">Código generado con IA sujeto posteriormente a revisión técnica.</p>
+              </div>
+            </div>
+            <p class="text-body-md text-muted italic measure">Las restricciones no se ocultaron: se utilizaron para priorizar dónde debía concentrarse el esfuerzo UX.</p>
+          </div>
+        </section>
+
+        <section class="case-section" id="resultados">
+          <button class="case-accordion-toggle" onclick="toggleAccordion(this)">
+            <h3 class="text-headline-sm">Resultados &amp; Aprendizaje</h3>
+            <span class="material-symbols-outlined md:hidden chevron">expand_more</span>
+          </button>
+          <div class="case-accordion-panel is-open">
+            <p class="text-body-md text-muted measure" style="margin-bottom:16px;">
+              RGR pasó de una lógica de landing a una estructura web preparada para organizar una oferta más amplia mediante un catálogo escalable. La solución permitió mejorar la separación de contenidos y establecer un recorrido más claro: exploración → producto → contacto.
+            </p>
+            <p class="text-body-md text-muted measure" style="margin-bottom:32px;">
+              No existía instrumentación analítica suficiente para atribuir cambios posteriores en conversión, por lo que el resultado se presenta desde la arquitectura, escalabilidad, eficiencia y factibilidad del proceso — no se inventan métricas.
+            </p>
+            <h4 class="text-headline-sm" style="margin-bottom:16px;">Lo que este proyecto cambió en mi proceso</h4>
+            <p class="text-body-md text-muted measure" style="margin-bottom:16px;">
+              Vibe Coding puede reducir el tiempo de producción, pero funciona mejor cuando el problema, la arquitectura y las prioridades ya están definidos.
+            </p>
+            <ol class="flex flex-col gap-xs text-body-md text-muted measure" style="margin-bottom:24px;">
+              <li><strong>01 —</strong> Usar IA después de definir el problema.</li>
+              <li><strong>02 —</strong> Diseñar componentes pensando también en desarrollo.</li>
+              <li><strong>03 —</strong> Utilizar la velocidad ganada para iterar, no solo para producir más rápido.</li>
+            </ol>
+            <p class="key-insight">¿Estamos construyendo la solución correcta para el usuario y para el negocio?</p>
+          </div>
+        </section>
+
+        <nav class="case-nav-final">
+          <a class="link-arrow" href="index.html#proyectos">
+            <span class="material-symbols-outlined icon">arrow_back</span> Todos los proyectos
+          </a>
+          <span class="text-label-md text-muted">Próximo caso próximamente</span>
+        </nav>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="flex flex-col gap-xs">
+    <a class="footer__brand" href="index.html">Carola Sandoval</a>
+    <p class="text-body-md text-on-primary-muted">© <span id="year"></span> Carola Sandoval. Hagamos algo que tenga sentido.</p>
+  </div>
+  <div class="footer__links footer__links--row">
+    <a href="#">LinkedIn</a>
+    <a href="#">Dribbble</a>
+    <a href="mailto:carola.sandoval@hotmail.com">Email</a>
+  </div>
+</footer>
+
+<div class="fab-group">
+  <a class="fab fab--accent" href="mailto:carola.sandoval@hotmail.com" aria-label="Enviar email a Carola Sandoval" title="Contactar">
+    <span class="material-symbols-outlined">mail</span>
+  </a>
+  <button class="fab fab--ghost" id="scrollTopBtn" aria-label="Volver arriba">
+    <span class="material-symbols-outlined">arrow_upward</span>
+  </button>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
