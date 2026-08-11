@@ -127,7 +127,7 @@ function initCaseMobileToc() {
 }
 
 // --- Acordeón de secciones del case study (mobile) ---------------
-// Se llama desde el atributo onclick="toggleAccordion(this)" en case-study.html
+// Se llama desde el atributo onclick="toggleAccordion(this)" en cada página de case study (rgr.html, etc.)
 function toggleAccordion(button) {
   const panel = button.nextElementSibling;
   const chevron = button.querySelector('.chevron');
