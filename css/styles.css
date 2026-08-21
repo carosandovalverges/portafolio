@@ -469,6 +469,86 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   font-weight: 700;
 }
 
+/* ---------- CARRUSEL "Cómo trabajo" ---------- */
+.carousel {
+  position: relative;
+  max-width: 640px;
+  margin-inline: auto;
+  padding-inline: 64px;
+}
+.carousel__viewport { overflow: hidden; }
+.carousel__track {
+  display: flex;
+  transition: transform 500ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.carousel__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+  opacity: 0.35;
+  transform: scale(0.92);
+  transition: opacity 500ms var(--ease), transform 500ms var(--ease);
+}
+.carousel__slide.is-active {
+  opacity: 1;
+  transform: scale(1);
+}
+.carousel__slide .step-card {
+  min-height: 220px;
+  border-radius: var(--radius-card-sm);
+  padding: var(--space-stack-md);
+}
+.carousel__slide .step-number {
+  width: 56px;
+  height: 56px;
+  font-size: 20px;
+  background: var(--accent);
+  color: var(--primary);
+}
+.carousel__slide .text-headline-sm { font-size: 28px; }
+
+.carousel__arrow {
+  position: absolute;
+  top: 100px;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  background: var(--surface-elevated);
+  border: 1px solid var(--border);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--duration) var(--ease), border-color var(--duration) var(--ease), transform var(--duration) var(--ease);
+}
+.carousel__arrow:hover { background: var(--accent); border-color: var(--accent); }
+.carousel__arrow--prev { left: 0; }
+.carousel__arrow--next { right: 0; }
+
+.carousel__dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: var(--space-stack-md);
+}
+.carousel__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: var(--radius-full);
+  background: var(--border);
+  transition: background var(--duration) var(--ease), width var(--duration) var(--ease);
+}
+.carousel__dot.is-active {
+  background: var(--accent);
+  width: 28px;
+}
+
+@media (max-width: 480px) {
+  .carousel { padding-inline: 48px; }
+  .carousel__arrow { width: 40px; height: 40px; top: 90px; }
+}
+
 /* ---------- 10. PROJECT CARDS ---------- */
 .project-card {
   display: flex;

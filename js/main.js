@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initProjectFilters();
   initCaseMobileToc();
   initCaseTocActiveState();
+  initCarousels();
 });
 
 // --- Año dinámico en el footer -------------------------------
@@ -156,4 +157,49 @@ function initCaseTocActiveState() {
   }, { rootMargin: '-40% 0px -50% 0px', threshold: 0 });
 
   sections.forEach(section => observer.observe(section));
+}
+
+// --- Carrusel "Cómo trabajo" (1 tarjeta por pantalla) -------------
+function initCarousels() {
+  document.querySelectorAll('[data-carousel]').forEach(setupCarousel);
+}
+
+function setupCarousel(root) {
+  const track = root.querySelector('[data-carousel-track]');
+  const slides = Array.from(root.querySelectorAll('.carousel__slide'));
+  const prevBtn = root.querySelector('[data-carousel-prev]');
+  const nextBtn = root.querySelector('[data-carousel-next]');
+  const dots = Array.from(root.querySelectorAll('[data-carousel-dot]'));
+  if (!track || !slides.length) return;
+
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let index = 0;
+
+  function goTo(newIndex) {
+    index = (newIndex + slides.length) % slides.length;
+    track.style.transform = `translateX(-${index * 100}%)`;
+    slides.forEach((slide, i) => slide.classList.toggle('is-active', i === index));
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('is-active', i === index);
+      dot.setAttribute('aria-current', i === index ? 'true' : 'false');
+    });
+  }
+
+  if (prefersReducedMotion) track.style.transition = 'none';
+
+  prevBtn && prevBtn.addEventListener('click', () => goTo(index - 1));
+  nextBtn && nextBtn.addEventListener('click', () => goTo(index + 1));
+  dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
+
+  // Swipe táctil básico
+  let touchStartX = null;
+  track.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].clientX; }, { passive: true });
+  track.addEventListener('touchend', (e) => {
+    if (touchStartX === null) return;
+    const delta = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(delta) > 40) goTo(delta < 0 ? index + 1 : index - 1);
+    touchStartX = null;
+  }, { passive: true });
+
+  goTo(0);
 }

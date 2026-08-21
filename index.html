@@ -40,9 +40,9 @@
   <section class="container hero">
     <div class="hero__content">
       <span class="text-eyebrow">UX / Product Design</span>
-      <h1 class="text-display-xl">Diseño de producto con estrategia, sistemas y IA</h1>
+      <h1 class="text-display-xl">Diseño experiencias digitales con propósito y proyección</h1>
       <p class="text-body-lg text-muted measure">
-        Hola, soy Carola. Transformo problemas complejos en experiencias digitales elegantes y escalables. Especializada en UX Strategy, Design Systems y la integración de IA en el proceso de diseño para equipos de alto rendimiento.
+        Hola, soy Carola, Diseñadora Digital con experiencia en proyectos B2B y B2C. Integro UX/UI, arquitectura de información, marketing digital, contenidos y analítica para diseñar experiencias claras y orientadas a objetivos de negocio, incorporando herramientas de IA para optimizar los procesos de exploración, prototipado y diseño
       </p>
       <div class="flex flex-wrap gap-xs" style="margin-top: 16px;">
         <span class="chip">UX/UI Design</span>
@@ -114,31 +114,58 @@
         "Adapto el proceso a las necesidades del negocio, pero nunca negocio la investigación inicial. El buen diseño es consecuencia de entender el problema real."
       </p>
     </div>
-    <div class="grid grid-5">
-      <div class="step-card">
-        <div class="step-number">1</div>
-        <h4 class="text-headline-sm">Entender</h4>
-        <p class="text-body-md text-muted">Research cualitativo y cuantitativo. Entrevistas y análisis de datos para definir el problema.</p>
+    <div class="carousel" data-carousel>
+      <div class="carousel__viewport">
+        <div class="carousel__track" data-carousel-track>
+          <div class="carousel__slide">
+            <div class="step-card">
+              <div class="step-number">1</div>
+              <h4 class="text-headline-sm">Entender</h4>
+              <p class="text-body-md text-muted">Brief, objetivos, contenidos y contexto. En sitios existentes, sumo auditoría heurística y análisis de datos para identificar fricciones, necesidades y oportunidades</p>
+            </div>
+          </div>
+          <div class="carousel__slide">
+            <div class="step-card">
+              <div class="step-number">2</div>
+              <h4 class="text-headline-sm">Estructurar</h4>
+              <p class="text-body-md text-muted">Arquitectura de información, flujos de usuario y wireframes de baja fidelidad.</p>
+            </div>
+          </div>
+          <div class="carousel__slide">
+            <div class="step-card">
+              <div class="step-number">3</div>
+              <h4 class="text-headline-sm">Diseñar</h4>
+              <p class="text-body-md text-muted">UI Design, prototipado de alta fidelidad y definición de Design Systems.</p>
+            </div>
+          </div>
+          <div class="carousel__slide">
+            <div class="step-card">
+              <div class="step-number">4</div>
+              <h4 class="text-headline-sm">Validar</h4>
+              <p class="text-body-md text-muted">Reviso la solución con cliente, usuarios o evidencia disponible, preparo el handoff a desarrollo y realizo QA visual y funcional durante la implementación.</p>
+            </div>
+          </div>
+          <div class="carousel__slide">
+            <div class="step-card">
+              <div class="step-number">5</div>
+              <h4 class="text-headline-sm">Iterar</h4>
+              <p class="text-body-md text-muted">Cuando existe continuidad y medición, analizo el comportamiento post-lanzamiento y priorizo mejoras basadas en datos, negocio y experiencia.</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="step-card">
-        <div class="step-number">2</div>
-        <h4 class="text-headline-sm">Estructurar</h4>
-        <p class="text-body-md text-muted">Arquitectura de información, flujos de usuario y wireframes de baja fidelidad.</p>
-      </div>
-      <div class="step-card">
-        <div class="step-number">3</div>
-        <h4 class="text-headline-sm">Diseñar</h4>
-        <p class="text-body-md text-muted">UI Design, prototipado de alta fidelidad y definición de Design Systems.</p>
-      </div>
-      <div class="step-card">
-        <div class="step-number">4</div>
-        <h4 class="text-headline-sm">Validar</h4>
-        <p class="text-body-md text-muted">Test de usabilidad con usuarios reales y QA visual con el equipo de desarrollo.</p>
-      </div>
-      <div class="step-card">
-        <div class="step-number">5</div>
-        <h4 class="text-headline-sm">Iterar</h4>
-        <p class="text-body-md text-muted">Medir impacto post-lanzamiento y aplicar mejoras continuas basadas en analíticas.</p>
+      <button class="carousel__arrow carousel__arrow--prev" data-carousel-prev aria-label="Paso anterior">
+        <span class="material-symbols-outlined">arrow_back</span>
+      </button>
+      <button class="carousel__arrow carousel__arrow--next" data-carousel-next aria-label="Paso siguiente">
+        <span class="material-symbols-outlined">arrow_forward</span>
+      </button>
+      <div class="carousel__dots" data-carousel-dots>
+        <button class="carousel__dot is-active" data-carousel-dot="0" aria-label="Ir al paso 1" aria-current="true"></button>
+        <button class="carousel__dot" data-carousel-dot="1" aria-label="Ir al paso 2"></button>
+        <button class="carousel__dot" data-carousel-dot="2" aria-label="Ir al paso 3"></button>
+        <button class="carousel__dot" data-carousel-dot="3" aria-label="Ir al paso 4"></button>
+        <button class="carousel__dot" data-carousel-dot="4" aria-label="Ir al paso 5"></button>
       </div>
     </div>
   </section>
